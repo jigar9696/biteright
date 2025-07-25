@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "805863827502",
+    "project_id": "bite-right-3rgh29",
+    "storage_bucket": "bite-right-3rgh29.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805863827502:android:cdc0ea661dfa0fb68397bf",
+        "android_client_info": {
+          "package_name": "com.mycompany.biteright"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "805863827502-clg358rmmn1ogf2u33eji43g5c6c6o1o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.biteright",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "805863827502-dre72h2dg98m9ng4t6118t1h3evptsls.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM_0McNAVjVsklWueq68JI7RfYxvUE0yY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "805863827502-dre72h2dg98m9ng4t6118t1h3evptsls.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "805863827502-18fgtbmffgpipus3k5o2kj00ejdp36ci.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.biteright"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
