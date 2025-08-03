@@ -76,14 +76,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
-      errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? NavBarPage() : OnboardingWidget(),
+      errorBuilder: (context, state) => appStateNotifier.loggedIn
+          ? NavBarPage()
+          : BiteRightOnboardingWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) =>
-              appStateNotifier.loggedIn ? NavBarPage() : OnboardingWidget(),
+          builder: (context, _) => appStateNotifier.loggedIn
+              ? NavBarPage()
+              : BiteRightOnboardingWidget(),
         ),
         FFRoute(
           name: ProfileSetupScreenWidget.routeName,
@@ -110,58 +112,58 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: OnboardingWidget.routeName,
-          path: OnboardingWidget.routePath,
-          builder: (context, params) => OnboardingWidget(),
+          name: BiteRightOnboardingWidget.routeName,
+          path: BiteRightOnboardingWidget.routePath,
+          builder: (context, params) => BiteRightOnboardingWidget(),
         ),
         FFRoute(
-          name: LoginWidget.routeName,
-          path: LoginWidget.routePath,
-          builder: (context, params) => LoginWidget(),
+          name: BiteRightLoginWidget.routeName,
+          path: BiteRightLoginWidget.routePath,
+          builder: (context, params) => BiteRightLoginWidget(),
         ),
         FFRoute(
-          name: CreateaccountWidget.routeName,
-          path: CreateaccountWidget.routePath,
-          builder: (context, params) => CreateaccountWidget(),
+          name: BiteRightCreateaccountWidget.routeName,
+          path: BiteRightCreateaccountWidget.routePath,
+          builder: (context, params) => BiteRightCreateaccountWidget(),
         ),
         FFRoute(
-          name: HomePageWidget.routeName,
-          path: HomePageWidget.routePath,
+          name: BiteRightHomePageWidget.routeName,
+          path: BiteRightHomePageWidget.routePath,
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'HomePage')
-              : HomePageWidget(),
+              ? NavBarPage(initialPage: 'BiteRight_HomePage')
+              : BiteRightHomePageWidget(),
         ),
         FFRoute(
-          name: SettingWidget.routeName,
-          path: SettingWidget.routePath,
+          name: BiteRightSettingWidget.routeName,
+          path: BiteRightSettingWidget.routePath,
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'Setting')
-              : SettingWidget(),
+              ? NavBarPage(initialPage: 'BiteRight_Setting')
+              : BiteRightSettingWidget(),
         ),
         FFRoute(
-          name: AccountInformationWidget.routeName,
-          path: AccountInformationWidget.routePath,
-          builder: (context, params) => AccountInformationWidget(),
+          name: BiteRightAccountInformationWidget.routeName,
+          path: BiteRightAccountInformationWidget.routePath,
+          builder: (context, params) => BiteRightAccountInformationWidget(),
         ),
         FFRoute(
-          name: ResetPasswordWidget.routeName,
-          path: ResetPasswordWidget.routePath,
-          builder: (context, params) => ResetPasswordWidget(),
+          name: BiteRightResetPasswordWidget.routeName,
+          path: BiteRightResetPasswordWidget.routePath,
+          builder: (context, params) => BiteRightResetPasswordWidget(),
         ),
         FFRoute(
-          name: DietaryProfileWidget.routeName,
-          path: DietaryProfileWidget.routePath,
-          builder: (context, params) => DietaryProfileWidget(),
+          name: BiteRightDietaryProfileWidget.routeName,
+          path: BiteRightDietaryProfileWidget.routePath,
+          builder: (context, params) => BiteRightDietaryProfileWidget(),
         ),
         FFRoute(
-          name: Auth3PhoneWidget.routeName,
-          path: Auth3PhoneWidget.routePath,
-          builder: (context, params) => Auth3PhoneWidget(),
+          name: BiteRightAuth3PhoneWidget.routeName,
+          path: BiteRightAuth3PhoneWidget.routePath,
+          builder: (context, params) => BiteRightAuth3PhoneWidget(),
         ),
         FFRoute(
-          name: Auth3VerifyPhoneWidget.routeName,
-          path: Auth3VerifyPhoneWidget.routePath,
-          builder: (context, params) => Auth3VerifyPhoneWidget(
+          name: BiteRightAuth3VerifyPhoneWidget.routeName,
+          path: BiteRightAuth3VerifyPhoneWidget.routePath,
+          builder: (context, params) => BiteRightAuth3VerifyPhoneWidget(
             phoneNumber: params.getParam(
               'phoneNumber',
               ParamType.String,
@@ -169,9 +171,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: ResultWidget.routeName,
-          path: ResultWidget.routePath,
-          builder: (context, params) => ResultWidget(),
+          name: BiteRightResultWidget.routeName,
+          path: BiteRightResultWidget.routePath,
+          builder: (context, params) => BiteRightResultWidget(
+            isSafe: params.getParam(
+              'isSafe',
+              ParamType.bool,
+            ),
+            conflictingIngredient: params.getParam(
+              'conflictingIngredient',
+              ParamType.String,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -342,7 +353,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
-            return '/onboarding';
+            return '/biteRightOnboarding';
           }
           return null;
         },

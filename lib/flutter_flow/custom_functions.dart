@@ -39,3 +39,19 @@ String findConflictingIngredient(
 // it means the product is safe. Return an empty string to signify this.
   return '';
 }
+
+List<String> splitTextToList(String? ocrText) {
+// This function takes a block of text and splits it into a list of strings.
+  // It's designed to handle the output from the OCR API.
+
+  // First, we check if the input text is null or just empty.
+  if (ocrText == null || ocrText.isEmpty) {
+    // If it is, we return an empty list to avoid any errors.
+    return [];
+  }
+
+  // If there is text, we split it into a list.
+  // The RegExp(r',|\n') part is a rule that tells the function
+  // to create a new list item every time it sees a comma (,) or a new line.
+  return ocrText.split(RegExp(r',|\n'));
+}

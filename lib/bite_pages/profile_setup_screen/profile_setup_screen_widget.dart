@@ -43,9 +43,6 @@ class _ProfileSetupScreenWidgetState extends State<ProfileSetupScreenWidget>
       initialIndex: 0,
     )..addListener(() => safeSetState(() {}));
 
-    _model.textController ??= TextEditingController();
-    _model.textFieldFocusNode ??= FocusNode();
-
     animationsMap.addAll({
       'containerOnPageLoadAnimation': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
@@ -387,180 +384,25 @@ class _ProfileSetupScreenWidgetState extends State<ProfileSetupScreenWidget>
                                                         ),
                                               ),
                                             ),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      10.0, 0.0, 10.0, 0.0),
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  Expanded(
-                                                    child: Container(
-                                                      width: 10.0,
-                                                      child: TextFormField(
-                                                        controller: _model
-                                                            .textController,
-                                                        focusNode: _model
-                                                            .textFieldFocusNode,
-                                                        autofocus: false,
-                                                        obscureText: false,
-                                                        decoration:
-                                                            InputDecoration(
-                                                          isDense: true,
-                                                          labelStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .labelMedium
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        FlutterFlowTheme.of(context)
-                                                                            .labelMediumFamily,
-                                                                    letterSpacing:
-                                                                        0.0,
-                                                                    useGoogleFonts:
-                                                                        !FlutterFlowTheme.of(context)
-                                                                            .labelMediumIsCustom,
-                                                                  ),
-                                                          hintText:
-                                                              '\"e.g., Peanut, Milk, Egg, Pork, Mustard ',
-                                                          hintStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .labelMedium
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        FlutterFlowTheme.of(context)
-                                                                            .labelMediumFamily,
-                                                                    letterSpacing:
-                                                                        0.0,
-                                                                    useGoogleFonts:
-                                                                        !FlutterFlowTheme.of(context)
-                                                                            .labelMediumIsCustom,
-                                                                  ),
-                                                          enabledBorder:
-                                                              OutlineInputBorder(
-                                                            borderSide:
-                                                                BorderSide(
-                                                              color: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .primaryText,
-                                                              width: 1.0,
-                                                            ),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        8.0),
-                                                          ),
-                                                          focusedBorder:
-                                                              OutlineInputBorder(
-                                                            borderSide:
-                                                                BorderSide(
-                                                              color: Color(
-                                                                  0x00000000),
-                                                              width: 1.0,
-                                                            ),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        8.0),
-                                                          ),
-                                                          errorBorder:
-                                                              OutlineInputBorder(
-                                                            borderSide:
-                                                                BorderSide(
-                                                              color: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .error,
-                                                              width: 1.0,
-                                                            ),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        8.0),
-                                                          ),
-                                                          focusedErrorBorder:
-                                                              OutlineInputBorder(
-                                                            borderSide:
-                                                                BorderSide(
-                                                              color: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .error,
-                                                              width: 1.0,
-                                                            ),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        8.0),
-                                                          ),
-                                                          filled: true,
-                                                          fillColor: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .secondaryBackground,
-                                                        ),
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMediumFamily,
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                  useGoogleFonts:
-                                                                      !FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMediumIsCustom,
-                                                                ),
-                                                        cursorColor:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primaryText,
-                                                        validator: _model
-                                                            .textControllerValidator
-                                                            .asValidator(
-                                                                context),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(10.0, 0.0,
-                                                                0.0, 0.0),
-                                                    child:
-                                                        FlutterFlowIconButton(
-                                                      borderRadius: 8.0,
-                                                      buttonSize: 40.0,
-                                                      fillColor:
-                                                          Color(0xFFE4E4E4),
-                                                      icon: Icon(
-                                                        Icons.add,
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primary,
-                                                        size: 24.0,
-                                                      ),
-                                                      onPressed: () {
-                                                        print(
-                                                            'IconButton pressed ...');
-                                                      },
-                                                    ),
-                                                  ),
-                                                ],
+                                            FlutterFlowIconButton(
+                                              borderRadius: 8.0,
+                                              buttonSize: 40.0,
+                                              fillColor:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primary,
+                                              icon: Icon(
+                                                Icons.add,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .info,
+                                                size: 24.0,
                                               ),
-                                            ),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      0.0, 10.0, 0.0, 0.0),
-                                              child: ListView(
-                                                padding: EdgeInsets.zero,
-                                                shrinkWrap: true,
-                                                scrollDirection: Axis.vertical,
-                                                children: [],
-                                              ),
+                                              onPressed: () async {
+                                                _model
+                                                    .addToCustomIngredientsList(
+                                                        '');
+                                                safeSetState(() {});
+                                              },
                                             ),
                                           ],
                                         ),
@@ -590,7 +432,7 @@ class _ProfileSetupScreenWidgetState extends State<ProfileSetupScreenWidget>
                                         .clearRedirectLocation();
 
                                     context.goNamedAuth(
-                                        OnboardingWidget.routeName,
+                                        BiteRightOnboardingWidget.routeName,
                                         context.mounted);
                                   },
                                   text: 'Log Out',

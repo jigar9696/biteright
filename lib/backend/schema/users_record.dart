@@ -26,11 +26,6 @@ class UsersRecord extends FirestoreRecord {
   String get displayName => _displayName ?? '';
   bool hasDisplayName() => _displayName != null;
 
-  // "photo_url" field.
-  String? _photoUrl;
-  String get photoUrl => _photoUrl ?? '';
-  bool hasPhotoUrl() => _photoUrl != null;
-
   // "uid" field.
   String? _uid;
   String get uid => _uid ?? '';
@@ -46,25 +41,10 @@ class UsersRecord extends FirestoreRecord {
   String get phoneNumber => _phoneNumber ?? '';
   bool hasPhoneNumber() => _phoneNumber != null;
 
-  // "shortDescription" field.
-  String? _shortDescription;
-  String get shortDescription => _shortDescription ?? '';
-  bool hasShortDescription() => _shortDescription != null;
-
   // "last_active_time" field.
   DateTime? _lastActiveTime;
   DateTime? get lastActiveTime => _lastActiveTime;
   bool hasLastActiveTime() => _lastActiveTime != null;
-
-  // "role" field.
-  String? _role;
-  String get role => _role ?? '';
-  bool hasRole() => _role != null;
-
-  // "title" field.
-  String? _title;
-  String get title => _title ?? '';
-  bool hasTitle() => _title != null;
 
   // "selected_groups" field.
   List<String>? _selectedGroups;
@@ -76,19 +56,21 @@ class UsersRecord extends FirestoreRecord {
   List<String> get customIngredients => _customIngredients ?? const [];
   bool hasCustomIngredients() => _customIngredients != null;
 
+  // "photo_url" field.
+  String? _photoUrl;
+  String get photoUrl => _photoUrl ?? '';
+  bool hasPhotoUrl() => _photoUrl != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
-    _photoUrl = snapshotData['photo_url'] as String?;
     _uid = snapshotData['uid'] as String?;
     _createdTime = snapshotData['created_time'] as DateTime?;
     _phoneNumber = snapshotData['phone_number'] as String?;
-    _shortDescription = snapshotData['shortDescription'] as String?;
     _lastActiveTime = snapshotData['last_active_time'] as DateTime?;
-    _role = snapshotData['role'] as String?;
-    _title = snapshotData['title'] as String?;
     _selectedGroups = getDataList(snapshotData['selected_groups']);
     _customIngredients = getDataList(snapshotData['custom_ingredients']);
+    _photoUrl = snapshotData['photo_url'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -127,27 +109,21 @@ class UsersRecord extends FirestoreRecord {
 Map<String, dynamic> createUsersRecordData({
   String? email,
   String? displayName,
-  String? photoUrl,
   String? uid,
   DateTime? createdTime,
   String? phoneNumber,
-  String? shortDescription,
   DateTime? lastActiveTime,
-  String? role,
-  String? title,
+  String? photoUrl,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
       'email': email,
       'display_name': displayName,
-      'photo_url': photoUrl,
       'uid': uid,
       'created_time': createdTime,
       'phone_number': phoneNumber,
-      'shortDescription': shortDescription,
       'last_active_time': lastActiveTime,
-      'role': role,
-      'title': title,
+      'photo_url': photoUrl,
     }.withoutNulls,
   );
 
@@ -162,32 +138,26 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
     const listEquality = ListEquality();
     return e1?.email == e2?.email &&
         e1?.displayName == e2?.displayName &&
-        e1?.photoUrl == e2?.photoUrl &&
         e1?.uid == e2?.uid &&
         e1?.createdTime == e2?.createdTime &&
         e1?.phoneNumber == e2?.phoneNumber &&
-        e1?.shortDescription == e2?.shortDescription &&
         e1?.lastActiveTime == e2?.lastActiveTime &&
-        e1?.role == e2?.role &&
-        e1?.title == e2?.title &&
         listEquality.equals(e1?.selectedGroups, e2?.selectedGroups) &&
-        listEquality.equals(e1?.customIngredients, e2?.customIngredients);
+        listEquality.equals(e1?.customIngredients, e2?.customIngredients) &&
+        e1?.photoUrl == e2?.photoUrl;
   }
 
   @override
   int hash(UsersRecord? e) => const ListEquality().hash([
         e?.email,
         e?.displayName,
-        e?.photoUrl,
         e?.uid,
         e?.createdTime,
         e?.phoneNumber,
-        e?.shortDescription,
         e?.lastActiveTime,
-        e?.role,
-        e?.title,
         e?.selectedGroups,
-        e?.customIngredients
+        e?.customIngredients,
+        e?.photoUrl
       ]);
 
   @override
