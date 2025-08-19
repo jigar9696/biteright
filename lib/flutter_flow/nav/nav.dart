@@ -88,30 +88,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : BiteRightOnboardingWidget(),
         ),
         FFRoute(
-          name: ProfileSetupScreenWidget.routeName,
-          path: ProfileSetupScreenWidget.routePath,
-          builder: (context, params) => ProfileSetupScreenWidget(),
-        ),
-        FFRoute(
-          name: HomeScreenWidget.routeName,
-          path: HomeScreenWidget.routePath,
-          builder: (context, params) => HomeScreenWidget(),
-        ),
-        FFRoute(
-          name: ResultScreenWidget.routeName,
-          path: ResultScreenWidget.routePath,
-          builder: (context, params) => ResultScreenWidget(
-            isSafe: params.getParam(
-              'isSafe',
-              ParamType.bool,
-            ),
-            conflictingIngredient: params.getParam(
-              'conflictingIngredient',
-              ParamType.String,
-            ),
-          ),
-        ),
-        FFRoute(
           name: BiteRightOnboardingWidget.routeName,
           path: BiteRightOnboardingWidget.routePath,
           builder: (context, params) => BiteRightOnboardingWidget(),
@@ -183,6 +159,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ParamType.String,
             ),
           ),
+        ),
+        FFRoute(
+          name: TestWidget.routeName,
+          path: TestWidget.routePath,
+          builder: (context, params) => TestWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

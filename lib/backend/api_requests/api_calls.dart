@@ -10,7 +10,9 @@ const _kPrivateApiFunctionName = 'ffPrivateApiCall';
 
 class OCRspaceCall {
   static Future<ApiCallResponse> call({
-    FFUploadedFile? uploadedImage,
+    String? imageUrl =
+        'https://images.openfoodfacts.org/images/products/089/899/901/0007/ingredients_en.94.400.jpg',
+    String? filetype = 'jpg',
   }) async {
     return ApiManager.instance.makeApiCall(
       callName: 'OCRspace',
@@ -18,9 +20,11 @@ class OCRspaceCall {
       callType: ApiCallType.POST,
       headers: {
         'apikey': 'K86209765988957',
+        'Content-type': 'application/json',
       },
       params: {
-        'file': uploadedImage,
+        'url': imageUrl,
+        'filetype': filetype,
       },
       bodyType: BodyType.MULTIPART,
       returnBody: true,
@@ -32,10 +36,11 @@ class OCRspaceCall {
     );
   }
 
-  static dynamic extractedText(dynamic response) => getJsonField(
+  static String? extractedText(dynamic response) =>
+      castToType<String>(getJsonField(
         response,
         r'''$.ParsedResults[0].ParsedText''',
-      );
+      ));
 }
 
 class ApiPagingParams {
