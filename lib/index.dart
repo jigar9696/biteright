@@ -1,24 +1,33 @@
 // Export pages
-export '/bite_pages/bite_right_onboarding/bite_right_onboarding_widget.dart'
-    show BiteRightOnboardingWidget;
-export '/bite_pages/bite_right_login/bite_right_login_widget.dart'
-    show BiteRightLoginWidget;
-export '/bite_pages/bite_right_createaccount/bite_right_createaccount_widget.dart'
-    show BiteRightCreateaccountWidget;
-export '/bite_pages/bite_right_home_page/bite_right_home_page_widget.dart'
-    show BiteRightHomePageWidget;
-export '/bite_pages/bite_right_setting/bite_right_setting_widget.dart'
-    show BiteRightSettingWidget;
-export '/bite_pages/bite_right_account_information/bite_right_account_information_widget.dart'
-    show BiteRightAccountInformationWidget;
-export '/bite_pages/bite_right_reset_password/bite_right_reset_password_widget.dart'
-    show BiteRightResetPasswordWidget;
-export '/bite_pages/bite_right_dietary_profile/bite_right_dietary_profile_widget.dart'
-    show BiteRightDietaryProfileWidget;
-export '/bite_pages/bite_right_auth_3_phone/bite_right_auth3_phone_widget.dart'
-    show BiteRightAuth3PhoneWidget;
-export '/bite_pages/bite_right_auth_3_verify_phone/bite_right_auth3_verify_phone_widget.dart'
-    show BiteRightAuth3VerifyPhoneWidget;
-export '/bite_pages/bite_right_result/bite_right_result_widget.dart'
-    show BiteRightResultWidget;
-export '/test/test_widget.dart' show TestWidget;
+export '/bite_pages/bite_right_a1_onboarding/bite_right_a1_onboarding_widget.dart'
+    show BiteRightA1OnboardingWidget;
+export '/bite_pages/bite_right_b1_login/bite_right_b1_login_widget.dart'
+    show BiteRightB1LoginWidget;
+export '/bite_pages/bite_right_a2_createaccount/bite_right_a2_createaccount_widget.dart'
+    show BiteRightA2CreateaccountWidget;
+export '/bite_pages/bite_right_c1_home_page/bite_right_c1_home_page_widget.dart'
+    show BiteRightC1HomePageWidget;
+export '/bite_pages/bite_right_d1_setting/bite_right_d1_setting_widget.dart'
+    show BiteRightD1SettingWidget;
+export '/bite_pages/bite_right_d2_account_information/bite_right_d2_account_information_widget.dart'
+    show BiteRightD2AccountInformationWidget;
+export '/bite_pages/bite_right_b4_reset_password/bite_right_b4_reset_password_widget.dart'
+    show BiteRightB4ResetPasswordWidget;
+export '/bite_pages/bite_right_d3_dietary_profile/bite_right_d3_dietary_profile_widget.dart'
+    show BiteRightD3DietaryProfileWidget;
+export '/bite_pages/bite_right_b2_auth_3_phone/bite_right_b2_auth3_phone_widget.dart'
+    show BiteRightB2Auth3PhoneWidget;
+export '/bite_pages/bite_right_b3_auth_3_verify_phone/bite_right_b3_auth3_verify_phone_widget.dart'
+    show BiteRightB3Auth3VerifyPhoneWidget;
+export '/bite_pages/bite_right_c2_result/bite_right_c2_result_widget.dart'
+    show BiteRightC2ResultWidget;
+export '/bite_pages/bite_right_d4_definitions/bite_right_d4_definitions_widget.dart'
+    show BiteRightD4DefinitionsWidget;
+export '/bite_pages/bite_right_d5_f_a_qs/bite_right_d5_f_a_qs_widget.dart'
+    show BiteRightD5FAQsWidget;
+export '/bite_pages/bite_right_d6_disclaimer/bite_right_d6_disclaimer_widget.dart'
+    show BiteRightD6DisclaimerWidget;
+export '/bite_pages/bite_right_d7_contact_us/bite_right_d7_contact_us_widget.dart'
+    show BiteRightD7ContactUsWidget;
+export '/bite_pages/bite_right_d8_copyright/bite_right_d8_copyright_widget.dart'
+    show BiteRightD8CopyrightWidget;

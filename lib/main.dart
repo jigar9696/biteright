@@ -135,7 +135,7 @@ class NavBarPage extends StatefulWidget {
 
 /// This is the private State class that goes with NavBarPage.
 class _NavBarPageState extends State<NavBarPage> {
-  String _currentPageName = 'BiteRight_HomePage';
+  String _currentPageName = 'BiteRight_C1_HomePage';
   late Widget? _currentPage;
 
   @override
@@ -148,8 +148,8 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
-      'BiteRight_HomePage': BiteRightHomePageWidget(),
-      'BiteRight_Setting': BiteRightSettingWidget(),
+      'BiteRight_C1_HomePage': BiteRightC1HomePageWidget(),
+      'BiteRight_D1_Setting': BiteRightD1SettingWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
