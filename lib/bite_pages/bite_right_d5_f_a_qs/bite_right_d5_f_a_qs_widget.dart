@@ -110,7 +110,7 @@ class _BiteRightD5FAQsWidgetState extends State<BiteRightD5FAQsWidget> {
                     ),
                     Container(
                       width: double.infinity,
-                      height: 200.0,
+                      height: 250.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         borderRadius: BorderRadius.only(
@@ -164,7 +164,7 @@ class _BiteRightD5FAQsWidgetState extends State<BiteRightD5FAQsWidget> {
                     ),
                     Container(
                       width: double.infinity,
-                      height: 170.0,
+                      height: 230.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         borderRadius: BorderRadius.only(
@@ -218,7 +218,7 @@ class _BiteRightD5FAQsWidgetState extends State<BiteRightD5FAQsWidget> {
                     ),
                     Container(
                       width: double.infinity,
-                      height: 170.0,
+                      height: 230.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         borderRadius: BorderRadius.only(
@@ -272,7 +272,7 @@ class _BiteRightD5FAQsWidgetState extends State<BiteRightD5FAQsWidget> {
                     ),
                     Container(
                       width: double.infinity,
-                      height: 160.0,
+                      height: 220.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         borderRadius: BorderRadius.only(
@@ -326,7 +326,7 @@ class _BiteRightD5FAQsWidgetState extends State<BiteRightD5FAQsWidget> {
                     ),
                     Container(
                       width: double.infinity,
-                      height: 230.0,
+                      height: 320.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         borderRadius: BorderRadius.only(
@@ -380,7 +380,7 @@ class _BiteRightD5FAQsWidgetState extends State<BiteRightD5FAQsWidget> {
                     ),
                     Container(
                       width: double.infinity,
-                      height: 180.0,
+                      height: 240.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         borderRadius: BorderRadius.only(

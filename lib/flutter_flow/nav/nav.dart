@@ -132,21 +132,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => BiteRightD3DietaryProfileWidget(),
         ),
         FFRoute(
-          name: BiteRightB2Auth3PhoneWidget.routeName,
-          path: BiteRightB2Auth3PhoneWidget.routePath,
-          builder: (context, params) => BiteRightB2Auth3PhoneWidget(),
-        ),
-        FFRoute(
-          name: BiteRightB3Auth3VerifyPhoneWidget.routeName,
-          path: BiteRightB3Auth3VerifyPhoneWidget.routePath,
-          builder: (context, params) => BiteRightB3Auth3VerifyPhoneWidget(
-            phoneNumber: params.getParam(
-              'phoneNumber',
-              ParamType.String,
-            ),
-          ),
-        ),
-        FFRoute(
           name: BiteRightC2ResultWidget.routeName,
           path: BiteRightC2ResultWidget.routePath,
           builder: (context, params) => BiteRightC2ResultWidget(
@@ -184,6 +169,41 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: BiteRightD8CopyrightWidget.routeName,
           path: BiteRightD8CopyrightWidget.routePath,
           builder: (context, params) => BiteRightD8CopyrightWidget(),
+        ),
+        FFRoute(
+          name: BiteRightD4aVeganWidget.routeName,
+          path: BiteRightD4aVeganWidget.routePath,
+          builder: (context, params) => BiteRightD4aVeganWidget(),
+        ),
+        FFRoute(
+          name: BiteRightD4aVegetarianWidget.routeName,
+          path: BiteRightD4aVegetarianWidget.routePath,
+          builder: (context, params) => BiteRightD4aVegetarianWidget(),
+        ),
+        FFRoute(
+          name: BiteRightD4aLactoseWidget.routeName,
+          path: BiteRightD4aLactoseWidget.routePath,
+          builder: (context, params) => BiteRightD4aLactoseWidget(),
+        ),
+        FFRoute(
+          name: BiteRightD4aDiabeticWidget.routeName,
+          path: BiteRightD4aDiabeticWidget.routePath,
+          builder: (context, params) => BiteRightD4aDiabeticWidget(),
+        ),
+        FFRoute(
+          name: BiteRightD4aHalalWidget.routeName,
+          path: BiteRightD4aHalalWidget.routePath,
+          builder: (context, params) => BiteRightD4aHalalWidget(),
+        ),
+        FFRoute(
+          name: BiteRightD4aFODMAPWidget.routeName,
+          path: BiteRightD4aFODMAPWidget.routePath,
+          builder: (context, params) => BiteRightD4aFODMAPWidget(),
+        ),
+        FFRoute(
+          name: BiteRightD4aKosherWidget.routeName,
+          path: BiteRightD4aKosherWidget.routePath,
+          builder: (context, params) => BiteRightD4aKosherWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'bite_right_a2_createaccount_model.dart';
 export 'bite_right_a2_createaccount_model.dart';
 
@@ -95,7 +94,7 @@ class _BiteRightA2CreateaccountWidgetState
                   alignment: AlignmentDirectional(-1.0, -1.0),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(25.0, 50.0, 0.0, 0.0),
                     child: Text(
                       'Welcome',
                       style:
@@ -114,7 +113,7 @@ class _BiteRightA2CreateaccountWidgetState
                   alignment: AlignmentDirectional(-1.0, -1.0),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(25.0, 12.0, 0.0, 12.0),
+                        EdgeInsetsDirectional.fromSTEB(25.0, 12.0, 0.0, 24.0),
                     child: Text(
                       'Let\'s get started by filling out the form below.',
                       style: FlutterFlowTheme.of(context).labelMedium.override(
@@ -575,181 +574,89 @@ class _BiteRightA2CreateaccountWidgetState
                           ),
                         ),
                       ),
-                      Align(
-                        alignment: AlignmentDirectional(0.0, -1.0),
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              25.0, 0.0, 25.0, 10.0),
-                          child: FFButtonWidget(
-                            onPressed: () async {
-                              logFirebaseEvent(
-                                  'BITE_RIGHT_A2_CREATEACCOUNT_CONTINUE_WIT');
-                              logFirebaseEvent('Button_auth');
-                              GoRouter.of(context).prepareAuthEvent();
-                              final user =
-                                  await authManager.signInWithGoogle(context);
-                              if (user == null) {
-                                return;
-                              }
+                      InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        onTap: () async {
+                          logFirebaseEvent(
+                              'BITE_RIGHT_A2_CREATEACCOUNT_Container_tn');
+                          logFirebaseEvent('Container_navigate_to');
 
-                              context.goNamedAuth(
-                                  BiteRightC1HomePageWidget.routeName,
-                                  context.mounted);
-                            },
-                            text: 'Continue with Google',
-                            icon: FaIcon(
-                              FontAwesomeIcons.google,
-                              size: 20.0,
+                          context.pushNamed(BiteRightB1LoginWidget.routeName);
+                        },
+                        child: Container(
+                          width: 262.0,
+                          height: 50.0,
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
+                            borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(24.0),
+                              bottomRight: Radius.circular(24.0),
+                              topLeft: Radius.circular(24.0),
+                              topRight: Radius.circular(24.0),
                             ),
-                            options: FFButtonOptions(
-                              width: 262.0,
-                              height: 50.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .titleSmallFamily,
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryText,
-                                    letterSpacing: 0.0,
-                                    useGoogleFonts:
-                                        !FlutterFlowTheme.of(context)
-                                            .titleSmallIsCustom,
-                                  ),
-                              elevation: 0.0,
-                              borderSide: BorderSide(
-                                color: FlutterFlowTheme.of(context).alternate,
-                                width: 2.0,
-                              ),
-                              borderRadius: BorderRadius.circular(24.0),
-                              hoverColor: FlutterFlowTheme.of(context)
-                                  .primaryBackground,
+                            border: Border.all(
+                              color: FlutterFlowTheme.of(context).alternate,
+                              width: 2.0,
                             ),
                           ),
-                        ),
-                      ),
-                      Align(
-                        alignment: AlignmentDirectional(0.0, -1.0),
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              25.0, 0.0, 25.0, 10.0),
-                          child: FFButtonWidget(
-                            onPressed: () async {
-                              logFirebaseEvent(
-                                  'BITE_RIGHT_A2_CREATEACCOUNT_CONTINUE_WIT');
-                              logFirebaseEvent('Button_navigate_to');
+                          child:
+                              // You will have to add an action on this rich text to go to your login page.
+                              Align(
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            child: InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                logFirebaseEvent(
+                                    'BITE_RIGHT_A2_CREATEACCOUNT_RichText_8th');
+                                logFirebaseEvent('RichText_navigate_to');
 
-                              context.pushNamed(
-                                BiteRightB2Auth3PhoneWidget.routeName,
-                                extra: <String, dynamic>{
-                                  kTransitionInfoKey: TransitionInfo(
-                                    hasTransition: true,
-                                    transitionType: PageTransitionType.fade,
-                                    duration: Duration(milliseconds: 0),
-                                  ),
-                                },
-                              );
-                            },
-                            text: 'Continue with Phone',
-                            icon: Icon(
-                              Icons.phone,
-                              size: 20.0,
-                            ),
-                            options: FFButtonOptions(
-                              width: 262.0,
-                              height: 50.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .titleSmallFamily,
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryText,
-                                    letterSpacing: 0.0,
-                                    useGoogleFonts:
-                                        !FlutterFlowTheme.of(context)
-                                            .titleSmallIsCustom,
-                                  ),
-                              elevation: 0.0,
-                              borderSide: BorderSide(
-                                color: FlutterFlowTheme.of(context).alternate,
-                                width: 2.0,
-                              ),
-                              borderRadius: BorderRadius.circular(24.0),
-                              hoverColor: FlutterFlowTheme.of(context)
-                                  .primaryBackground,
-                            ),
-                          ),
-                        ),
-                      ),
-
-                      // You will have to add an action on this rich text to go to your login page.
-                      Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 10.0),
-                          child: InkWell(
-                            splashColor: Colors.transparent,
-                            focusColor: Colors.transparent,
-                            hoverColor: Colors.transparent,
-                            highlightColor: Colors.transparent,
-                            onTap: () async {
-                              logFirebaseEvent(
-                                  'BITE_RIGHT_A2_CREATEACCOUNT_RichText_a2t');
-                              logFirebaseEvent('RichText_navigate_to');
-
-                              context
-                                  .pushNamed(BiteRightB1LoginWidget.routeName);
-                            },
-                            child: RichText(
-                              textScaler: MediaQuery.of(context).textScaler,
-                              text: TextSpan(
-                                children: [
-                                  TextSpan(
-                                    text: 'Already have an account? ',
-                                    style: TextStyle(),
-                                  ),
-                                  TextSpan(
-                                    text: 'Sign in here',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMediumFamily,
-                                          color: FlutterFlowTheme.of(context)
-                                              .primary,
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.w600,
-                                          useGoogleFonts:
-                                              !FlutterFlowTheme.of(context)
-                                                  .bodyMediumIsCustom,
-                                        ),
-                                  )
-                                ],
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .bodyMediumFamily,
-                                      letterSpacing: 0.0,
-                                      useGoogleFonts:
-                                          !FlutterFlowTheme.of(context)
-                                              .bodyMediumIsCustom,
+                                context.pushNamed(
+                                    BiteRightB1LoginWidget.routeName);
+                              },
+                              child: RichText(
+                                textScaler: MediaQuery.of(context).textScaler,
+                                text: TextSpan(
+                                  children: [
+                                    TextSpan(
+                                      text: 'Have an account? ',
+                                      style: TextStyle(),
                                     ),
+                                    TextSpan(
+                                      text: 'Sign in',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMediumFamily,
+                                            color: FlutterFlowTheme.of(context)
+                                                .primary,
+                                            letterSpacing: 0.0,
+                                            fontWeight: FontWeight.w600,
+                                            useGoogleFonts:
+                                                !FlutterFlowTheme.of(context)
+                                                    .bodyMediumIsCustom,
+                                          ),
+                                    )
+                                  ],
+                                  style: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .override(
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .titleSmallFamily,
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts:
+                                            !FlutterFlowTheme.of(context)
+                                                .titleSmallIsCustom,
+                                      ),
+                                ),
                               ),
                             ),
                           ),

@@ -15,10 +15,6 @@ export '/bite_pages/bite_right_b4_reset_password/bite_right_b4_reset_password_wi
     show BiteRightB4ResetPasswordWidget;
 export '/bite_pages/bite_right_d3_dietary_profile/bite_right_d3_dietary_profile_widget.dart'
     show BiteRightD3DietaryProfileWidget;
-export '/bite_pages/bite_right_b2_auth_3_phone/bite_right_b2_auth3_phone_widget.dart'
-    show BiteRightB2Auth3PhoneWidget;
-export '/bite_pages/bite_right_b3_auth_3_verify_phone/bite_right_b3_auth3_verify_phone_widget.dart'
-    show BiteRightB3Auth3VerifyPhoneWidget;
 export '/bite_pages/bite_right_c2_result/bite_right_c2_result_widget.dart'
     show BiteRightC2ResultWidget;
 export '/bite_pages/bite_right_d4_definitions/bite_right_d4_definitions_widget.dart'
@@ -31,3 +27,17 @@ export '/bite_pages/bite_right_d7_contact_us/bite_right_d7_contact_us_widget.dar
     show BiteRightD7ContactUsWidget;
 export '/bite_pages/bite_right_d8_copyright/bite_right_d8_copyright_widget.dart'
     show BiteRightD8CopyrightWidget;
+export '/bite_pages/bite_right_d4a_vegan/bite_right_d4a_vegan_widget.dart'
+    show BiteRightD4aVeganWidget;
+export '/bite_pages/bite_right_d4a_vegetarian/bite_right_d4a_vegetarian_widget.dart'
+    show BiteRightD4aVegetarianWidget;
+export '/bite_pages/bite_right_d4a_lactose/bite_right_d4a_lactose_widget.dart'
+    show BiteRightD4aLactoseWidget;
+export '/bite_pages/bite_right_d4a_diabetic/bite_right_d4a_diabetic_widget.dart'
+    show BiteRightD4aDiabeticWidget;
+export '/bite_pages/bite_right_d4a_halal/bite_right_d4a_halal_widget.dart'
+    show BiteRightD4aHalalWidget;
+export '/bite_pages/bite_right_d4a_f_o_d_m_a_p/bite_right_d4a_f_o_d_m_a_p_widget.dart'
+    show BiteRightD4aFODMAPWidget;
+export '/bite_pages/bite_right_d4a_kosher/bite_right_d4a_kosher_widget.dart'
+    show BiteRightD4aKosherWidget;

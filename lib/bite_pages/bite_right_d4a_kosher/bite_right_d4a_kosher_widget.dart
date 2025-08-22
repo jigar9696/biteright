@@ -2,33 +2,32 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'bite_right_d8_copyright_model.dart';
-export 'bite_right_d8_copyright_model.dart';
+import 'bite_right_d4a_kosher_model.dart';
+export 'bite_right_d4a_kosher_model.dart';
 
-class BiteRightD8CopyrightWidget extends StatefulWidget {
-  const BiteRightD8CopyrightWidget({super.key});
+class BiteRightD4aKosherWidget extends StatefulWidget {
+  const BiteRightD4aKosherWidget({super.key});
 
-  static String routeName = 'BiteRight_D8_Copyright';
-  static String routePath = '/biteRightD8Copyright';
+  static String routeName = 'BiteRight_D4a_Kosher';
+  static String routePath = '/biteRightD4aKosher';
 
   @override
-  State<BiteRightD8CopyrightWidget> createState() =>
-      _BiteRightD8CopyrightWidgetState();
+  State<BiteRightD4aKosherWidget> createState() =>
+      _BiteRightD4aKosherWidgetState();
 }
 
-class _BiteRightD8CopyrightWidgetState
-    extends State<BiteRightD8CopyrightWidget> {
-  late BiteRightD8CopyrightModel _model;
+class _BiteRightD4aKosherWidgetState extends State<BiteRightD4aKosherWidget> {
+  late BiteRightD4aKosherModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => BiteRightD8CopyrightModel());
+    _model = createModel(context, () => BiteRightD4aKosherModel());
 
     logFirebaseEvent('screen_view',
-        parameters: {'screen_name': 'BiteRight_D8_Copyright'});
+        parameters: {'screen_name': 'BiteRight_D4a_Kosher'});
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
@@ -76,13 +75,13 @@ class _BiteRightD8CopyrightWidgetState
                           ),
                           onPressed: () async {
                             logFirebaseEvent(
-                                'BITE_RIGHT_D8_COPYRIGHT_arrow_back_ICN_O');
+                                'BITE_RIGHT_D4A_KOSHER_arrow_back_ICN_ON_');
                             logFirebaseEvent('IconButton_navigate_back');
                             context.safePop();
                           },
                         ),
                         Text(
-                          'Copyright',
+                          'Kosher',
                           textAlign: TextAlign.start,
                           style: FlutterFlowTheme.of(context)
                               .titleSmall
@@ -132,7 +131,7 @@ class _BiteRightD8CopyrightWidgetState
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   10.0, 10.0, 10.0, 0.0),
                               child: Text(
-                                'Copyright Notice: Bite Right\nPreamble & Statement of Ownership\nCopyright © 2025 \nKoshti Jigar Chandraprakash. \nAll Rights Reserved.',
+                                'Kosher refers to food that is prepared in accordance with traditional Jewish dietary laws, known as Kashrut. The term itself means \"fit\" or \"proper\" in Hebrew.',
                                 textAlign: TextAlign.center,
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
@@ -153,7 +152,48 @@ class _BiteRightD8CopyrightWidgetState
                     ),
                     Container(
                       width: double.infinity,
-                      height: 1800.0,
+                      height: 120.0,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(8.0),
+                          bottomRight: Radius.circular(8.0),
+                          topLeft: Radius.circular(8.0),
+                          topRight: Radius.circular(8.0),
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Align(
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            child: Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 20.0, 0.0, 20.0),
+                              child: Text(
+                                'When you select the Kosher profile, we will automatically filter out and flag items containing',
+                                textAlign: TextAlign.center,
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily,
+                                      letterSpacing: 0.0,
+                                      fontWeight: FontWeight.w600,
+                                      useGoogleFonts:
+                                          !FlutterFlowTheme.of(context)
+                                              .bodyMediumIsCustom,
+                                    ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      width: double.infinity,
+                      height: 900.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         borderRadius: BorderRadius.only(
@@ -171,7 +211,7 @@ class _BiteRightD8CopyrightWidgetState
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 10.0, 10.0, 10.0),
                             child: Text(
-                              'This mobile application, \"Bite Right,\" and all associated intellectual property—including its source code, object code, user interface, branding, and documentation (the \"Work\")—are the exclusive property of the author, Koshti Jigar Chandraprakash. This Work was created to fulfil the requirements of a dissertation at Sheffield Hallam University. All rights are reserved under the copyright laws of England and Wales and international treaties.\n\nLimited Academic License & Prohibited Uses\nThe author grants a limited, non-exclusive, non-transferable, revocable license to use this Work on a personal device solely for the purposes of academic evaluation and demonstration related to this dissertation project.\n\nAny use beyond this limited scope is a violation of this license and an infringement of copyright. The following actions are strictly prohibited without prior written consent from the author:\n\nNo Commercialization: The Application is a non-commercial academic work and may not be sold, leased, sublicensed, or used for any commercial purpose or financial gain.\n\nNo Reproduction or Distribution: You may not copy, share, or distribute the Application or any of its parts.\n\nNo Modification or Reverse Engineering: You may not alter, decompile, disassemble, or create derivative works from the Application.\n\nProtection of Academic Integrity: You may not represent this Work, or any portion thereof, as your own. Using this Work in any manner that constitutes plagiarism or academic misconduct is expressly forbidden.\n\nAcknowledgement of Third-Party Materials\nThis Work may incorporate third-party libraries or assets that are subject to their own copyright and license terms. The copyright for such materials remains with their respective owners. This notice does not grant you any rights to use these third-party materials outside of their intended function within this Application.\n\nNo Waiver\nFailure by the author to enforce any provision of this notice shall not be construed as a waiver of any right or provision. Any waiver of a right must be in writing and signed by the author to be valid.\n\nEnquiries\nTo request permission for any use of this Work outside the scope of the limited academic license, please contact the author at: Koshti.Jigar.Ch@student.shu.ac.uk OR jigar9696@gmail.com.',
+                              'Meat\n\nIngredient Name: Pork\nAlso Known As (AKA): Bacon, Ham, Sausages, Lard\nDirect Animal Source: Pig\n\nIngredient Name: Camel\nDirect Animal Source: Camel\n\nSeafood\n\nIngredient Name: Shellfish\nAlso Known As (AKA): Shrimp, Crab, Lobster, Oysters\nDirect Animal Source: Various shellfish\n\nFish\n\nIngredient Name: Catfish\nDirect Animal Source: Catfish\n\nColoring\n\nIngredient Name: Carmine\nAlso Known As (AKA): Cochineal\nE-Number: E120\nDirect Animal Source: Insects\n\nCoating\n\nIngredient Name: Shellac\nAlso Known As (AKA): Confectioner\'s glaze\nE-Number: E904\nDirect Animal Source: Insects',
                               textAlign: TextAlign.start,
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium

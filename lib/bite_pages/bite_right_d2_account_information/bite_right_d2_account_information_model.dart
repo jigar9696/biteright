@@ -9,15 +9,10 @@ class BiteRightD2AccountInformationModel
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for AccountInfoName widget.
-  FocusNode? accountInfoNameFocusNode1;
-  TextEditingController? accountInfoNameTextController1;
+  FocusNode? accountInfoNameFocusNode;
+  TextEditingController? accountInfoNameTextController;
   String? Function(BuildContext, String?)?
-      accountInfoNameTextController1Validator;
-  // State field(s) for AccountInfoName widget.
-  FocusNode? accountInfoNameFocusNode2;
-  TextEditingController? accountInfoNameTextController2;
-  String? Function(BuildContext, String?)?
-      accountInfoNameTextController2Validator;
+      accountInfoNameTextControllerValidator;
   // State field(s) for AccountInfoEmailID widget.
   FocusNode? accountInfoEmailIDFocusNode;
   TextEditingController? accountInfoEmailIDTextController;
@@ -29,11 +24,8 @@ class BiteRightD2AccountInformationModel
 
   @override
   void dispose() {
-    accountInfoNameFocusNode1?.dispose();
-    accountInfoNameTextController1?.dispose();
-
-    accountInfoNameFocusNode2?.dispose();
-    accountInfoNameTextController2?.dispose();
+    accountInfoNameFocusNode?.dispose();
+    accountInfoNameTextController?.dispose();
 
     accountInfoEmailIDFocusNode?.dispose();
     accountInfoEmailIDTextController?.dispose();

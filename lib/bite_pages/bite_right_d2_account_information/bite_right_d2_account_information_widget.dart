@@ -34,13 +34,9 @@ class _BiteRightD2AccountInformationWidgetState
 
     logFirebaseEvent('screen_view',
         parameters: {'screen_name': 'BiteRight_D2_AccountInformation'});
-    _model.accountInfoNameTextController1 ??=
+    _model.accountInfoNameTextController ??=
         TextEditingController(text: currentUserDisplayName);
-    _model.accountInfoNameFocusNode1 ??= FocusNode();
-
-    _model.accountInfoNameTextController2 ??=
-        TextEditingController(text: currentPhoneNumber);
-    _model.accountInfoNameFocusNode2 ??= FocusNode();
+    _model.accountInfoNameFocusNode ??= FocusNode();
 
     _model.accountInfoEmailIDTextController ??=
         TextEditingController(text: currentUserEmail);
@@ -125,13 +121,13 @@ class _BiteRightD2AccountInformationWidgetState
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 35.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
                     child: AuthUserStreamWidget(
                       builder: (context) => Container(
                         width: double.infinity,
                         child: TextFormField(
-                          controller: _model.accountInfoNameTextController1,
-                          focusNode: _model.accountInfoNameFocusNode1,
+                          controller: _model.accountInfoNameTextController,
+                          focusNode: _model.accountInfoNameFocusNode,
                           autofocus: false,
                           obscureText: false,
                           decoration: InputDecoration(
@@ -198,88 +194,7 @@ class _BiteRightD2AccountInformationWidgetState
                               ),
                           cursorColor: FlutterFlowTheme.of(context).primaryText,
                           validator: _model
-                              .accountInfoNameTextController1Validator
-                              .asValidator(context),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
-                    child: AuthUserStreamWidget(
-                      builder: (context) => Container(
-                        width: double.infinity,
-                        child: TextFormField(
-                          controller: _model.accountInfoNameTextController2,
-                          focusNode: _model.accountInfoNameFocusNode2,
-                          autofocus: false,
-                          obscureText: false,
-                          decoration: InputDecoration(
-                            isDense: true,
-                            labelStyle: FlutterFlowTheme.of(context)
-                                .labelMedium
-                                .override(
-                                  fontFamily: FlutterFlowTheme.of(context)
-                                      .labelMediumFamily,
-                                  letterSpacing: 0.0,
-                                  useGoogleFonts: !FlutterFlowTheme.of(context)
-                                      .labelMediumIsCustom,
-                                ),
-                            hintText: 'Mobile Number ',
-                            hintStyle: FlutterFlowTheme.of(context)
-                                .labelMedium
-                                .override(
-                                  fontFamily: FlutterFlowTheme.of(context)
-                                      .labelMediumFamily,
-                                  letterSpacing: 0.0,
-                                  useGoogleFonts: !FlutterFlowTheme.of(context)
-                                      .labelMediumIsCustom,
-                                ),
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1.0,
-                              ),
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1.0,
-                              ),
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                            errorBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: FlutterFlowTheme.of(context).error,
-                                width: 1.0,
-                              ),
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                            focusedErrorBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: FlutterFlowTheme.of(context).error,
-                                width: 1.0,
-                              ),
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                            filled: true,
-                            fillColor: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                          ),
-                          style: FlutterFlowTheme.of(context)
-                              .bodyMedium
-                              .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyMediumFamily,
-                                letterSpacing: 0.0,
-                                useGoogleFonts: !FlutterFlowTheme.of(context)
-                                    .bodyMediumIsCustom,
-                              ),
-                          cursorColor: FlutterFlowTheme.of(context).primaryText,
-                          validator: _model
-                              .accountInfoNameTextController2Validator
+                              .accountInfoNameTextControllerValidator
                               .asValidator(context),
                         ),
                       ),
@@ -367,7 +282,7 @@ class _BiteRightD2AccountInformationWidgetState
                     alignment: AlignmentDirectional(0.0, -1.0),
                     child: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(
-                          25.0, 25.0, 25.0, 16.0),
+                          25.0, 75.0, 25.0, 16.0),
                       child: FFButtonWidget(
                         onPressed: () async {
                           logFirebaseEvent(
@@ -377,9 +292,7 @@ class _BiteRightD2AccountInformationWidgetState
                           await currentUserReference!
                               .update(createUsersRecordData(
                             displayName:
-                                _model.accountInfoNameTextController1.text,
-                            phoneNumber:
-                                _model.accountInfoNameTextController2.text,
+                                _model.accountInfoNameTextController.text,
                             email: _model.accountInfoEmailIDTextController.text,
                           ));
                         },
