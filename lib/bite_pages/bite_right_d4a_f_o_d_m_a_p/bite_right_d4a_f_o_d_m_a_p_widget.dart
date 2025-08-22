@@ -193,7 +193,7 @@ class _BiteRightD4aFODMAPWidgetState extends State<BiteRightD4aFODMAPWidget> {
                     ),
                     Container(
                       width: double.infinity,
-                      height: 1900.0,
+                      height: 2200.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         borderRadius: BorderRadius.only(

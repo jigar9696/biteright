@@ -150,7 +150,7 @@ class _BiteRightD6DisclaimerWidgetState
                     ),
                     Container(
                       width: double.infinity,
-                      height: 2500.0,
+                      height: 3000.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         borderRadius: BorderRadius.only(

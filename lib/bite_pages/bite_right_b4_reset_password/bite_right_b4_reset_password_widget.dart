@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'bite_right_b4_reset_password_model.dart';
 export 'bite_right_b4_reset_password_model.dart';
@@ -222,6 +223,10 @@ class _BiteRightB4ResetPasswordWidgetState
                             email: _model.accountInfoEmailIDTextController.text,
                             context: context,
                           );
+                          logFirebaseEvent('Button_navigate_to');
+
+                          context.pushNamed(BiteRightB1LoginWidget.routeName);
+
                           logFirebaseEvent('Button_show_snack_bar');
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(

@@ -231,7 +231,7 @@ class _BiteRightD4aDiabeticWidgetState
                     ),
                     Container(
                       width: double.infinity,
-                      height: 1300.0,
+                      height: 1500.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         borderRadius: BorderRadius.only(

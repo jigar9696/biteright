@@ -194,7 +194,7 @@ class _BiteRightD4aVegetarianWidgetState
                     ),
                     Container(
                       width: double.infinity,
-                      height: 2400.0,
+                      height: 2700.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         borderRadius: BorderRadius.only(

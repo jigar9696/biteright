@@ -193,7 +193,7 @@ class _BiteRightD4aLactoseWidgetState extends State<BiteRightD4aLactoseWidget> {
                     ),
                     Container(
                       width: double.infinity,
-                      height: 1300.0,
+                      height: 1500.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         borderRadius: BorderRadius.only(

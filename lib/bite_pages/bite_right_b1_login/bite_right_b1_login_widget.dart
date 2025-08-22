@@ -502,6 +502,7 @@ class _BiteRightB1LoginWidgetState extends State<BiteRightB1LoginWidget> {
                                 .override(
                                   fontFamily: FlutterFlowTheme.of(context)
                                       .titleSmallFamily,
+                                  fontSize: 14.0,
                                   letterSpacing: 0.0,
                                   useGoogleFonts: !FlutterFlowTheme.of(context)
                                       .titleSmallIsCustom,

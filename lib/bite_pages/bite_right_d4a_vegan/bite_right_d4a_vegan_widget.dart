@@ -193,7 +193,7 @@ class _BiteRightD4aVeganWidgetState extends State<BiteRightD4aVeganWidget> {
                     ),
                     Container(
                       width: double.infinity,
-                      height: 3700.0,
+                      height: 4300.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         borderRadius: BorderRadius.only(
@@ -207,35 +207,40 @@ class _BiteRightD4aVeganWidgetState extends State<BiteRightD4aVeganWidget> {
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          RichText(
-                            textScaler: MediaQuery.of(context).textScaler,
-                            text: TextSpan(
-                              children: [
-                                TextSpan(
-                                  text:
-                                      'Obvious Animal Product\n\nIngredient Name: Meat\nAlso Known As (AKA): Flesh, Game\nDirect Animal Source: Mammals (cows, pigs, sheep, etc.)\n\nIngredient Name: Poultry\nAlso Known As (AKA): Chicken, Turkey, Duck\nDirect Animal Source: Birds\n\nIngredient Name: Fish\nAlso Known As (AKA): Seafood\nDirect Animal Source: Fish\n\nIngredient Name: Crustaceans\nAlso Known As (AKA): Shellfish, Prawns, Crab, Lobster\nDirect Animal Source: Aquatic arthropods\n\nIngredient Name: Molluscs\nAlso Known As (AKA): Shellfish, Mussels, Scallops, Oysters\nDirect Animal Source: Aquatic molluscs\n\nDairy\n\nIngredient Name: Milk\nAlso Known As (AKA): Milk Solids, Milk Powder\nDirect Animal Source: Cows, goats, sheep\n\nIngredient Name: Cheese\nDirect Animal Source: Mammal\'s Milk\n\nIngredient Name: Butter\nAlso Known As (AKA): Ghee\nDirect Animal Source: Mammal\'s Milk\n\nIngredient Name: Yogurt\nDirect Animal Source: Mammal\'s Milk\n\nIngredient Name: Cream\nDirect Animal Source: Mammal\'s Milk\n\nAnimal Product\n\nIngredient Name: Eggs\nAlso Known As (AKA): Ovum\nDirect Animal Source: Birds (primarily chickens)\n\nAnimal Product Derivative\n\nIngredient Name: Albumen\nAlso Known As (AKA): Albumin, Egg White\nDirect Animal Source: Chicken Eggs\n\nDairy Derivative\n\nIngredient Name: Casein\nAlso Known As (AKA): Caseinate, Sodium Caseinate\nDirect Animal Source: Mammal\'s Milk\n\nIngredient Name: Whey\nAlso Known As (AKA): Whey Powder, Whey Protein\nDirect Animal Source: Mammal\'s Milk\n\nIngredient Name: Lactose\nAlso Known As (AKA): Milk Sugar\nDirect Animal Source: Mammal\'s Milk\n\nBee Product\n\nIngredient Name: Honey\nDirect Animal Source: Honey Bees\n\nIngredient Name: Beeswax\nE-Number: E901\nDirect Animal Source: Honey Bees\n\nIngredient Name: Propolis\nDirect Animal Source: Honey Bees\n\nIngredient Name: Royal Jelly\nDirect Animal Source: Honey Bees\n\nSlaughter By-product\n\nIngredient Name: Gelatin\nAlso Known As (AKA): Gelatine\nE-Number: E441\nDirect Animal Source: Animal bones, skin, connective tissues\n\nIngredient Name: Lard / Tallow\nAlso Known As (AKA): Dripping\nDirect Animal Source: Rendered animal fat (pig, cow, etc.)\n\nIngredient Name: Suet\nDirect Animal Source: Fat from around the kidneys of cows/sheep\n\nIngredient Name: Isinglass\nDirect Animal Source: Fish swim bladders\n\nIngredient Name: Rennet\nAlso Known As (AKA): Animal Rennet\nDirect Animal Source: Stomachs of young mammals\n\nIngredient Name: Pepsin\nDirect Animal Source: Pig stomachs\n\nIngredient Name: Aspic\nDirect Animal Source: Meat or fish stock\n\nInsect Product\n\nIngredient Name: Carmine\nAlso Known As (AKA): Cochineal, Carminic Acid\nE-Number: E120\nDirect Animal Source: Cochineal insects\n\nIngredient Name: Shellac\nAlso Known As (AKA): Confectioner\'s Glaze\nE-Number: E904\nDirect Animal Source: Lac insects\n\nProcessing Aid\n\nIngredient Name: Bone Char\nAlso Known As (AKA): Natural Carbon\nDirect Animal Source: Animal bones\nAmbiguous (Animal or Plant)\n\nIngredient Name: Vitamin D3\nAlso Known As (AKA): Cholecalciferol\nDirect Animal Source: Sheep\'s wool (lanolin) or lichen\n\nIngredient Name: L-cysteine\nE-Number: E920\nDirect Animal Source: Poultry feathers, human hair, or microbial fermentation\n\nIngredient Name: Glycerin / Glycerol\nE-Number: E422\nDirect Animal Source: Animal fats or vegetable oils\n\nIngredient Name: Mono- and Diglycerides\nE-Number: E471\nDirect Animal Source: Animal fats or vegetable oils\n\nIngredient Name: Stearic Acid\nE-Number: E570\nDirect Animal Source: Animal fats or vegetable fats\n\nIngredient Name: Lecithin\nE-Number: E322\nDirect Animal Source: Egg yolks or soy beans\n\nNatural Flavouring\n\nIngredient Name: Squalene / Squalane\nDirect Animal Source: Shark liver oil or plants (olives, sugarcane)\n\nIngredient Name: Castoreum\nDirect Animal Source: Beaver scent glands',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
-                                        letterSpacing: 0.0,
-                                        useGoogleFonts:
-                                            !FlutterFlowTheme.of(context)
-                                                .bodyMediumIsCustom,
-                                      ),
-                                )
-                              ],
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
-                                    letterSpacing: 0.0,
-                                    useGoogleFonts:
-                                        !FlutterFlowTheme.of(context)
-                                            .bodyMediumIsCustom,
-                                  ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                10.0, 10.0, 10.0, 10.0),
+                            child: RichText(
+                              textScaler: MediaQuery.of(context).textScaler,
+                              text: TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text:
+                                        'Obvious Animal Product\n\nIngredient Name: Meat\nAlso Known As (AKA): Flesh, Game\nDirect Animal Source: Mammals (cows, pigs, sheep, etc.)\n\nIngredient Name: Poultry\nAlso Known As (AKA): Chicken, Turkey, Duck\nDirect Animal Source: Birds\n\nIngredient Name: Fish\nAlso Known As (AKA): Seafood\nDirect Animal Source: Fish\n\nIngredient Name: Crustaceans\nAlso Known As (AKA): Shellfish, Prawns, Crab, Lobster\nDirect Animal Source: Aquatic arthropods\n\nIngredient Name: Molluscs\nAlso Known As (AKA): Shellfish, Mussels, Scallops, Oysters\nDirect Animal Source: Aquatic molluscs\n\nDairy\n\nIngredient Name: Milk\nAlso Known As (AKA): Milk Solids, Milk Powder\nDirect Animal Source: Cows, goats, sheep\n\nIngredient Name: Cheese\nDirect Animal Source: Mammal\'s Milk\n\nIngredient Name: Butter\nAlso Known As (AKA): Ghee\nDirect Animal Source: Mammal\'s Milk\n\nIngredient Name: Yogurt\nDirect Animal Source: Mammal\'s Milk\n\nIngredient Name: Cream\nDirect Animal Source: Mammal\'s Milk\n\nAnimal Product\n\nIngredient Name: Eggs\nAlso Known As (AKA): Ovum\nDirect Animal Source: Birds (primarily chickens)\n\nAnimal Product Derivative\n\nIngredient Name: Albumen\nAlso Known As (AKA): Albumin, Egg White\nDirect Animal Source: Chicken Eggs\n\nDairy Derivative\n\nIngredient Name: Casein\nAlso Known As (AKA): Caseinate, Sodium Caseinate\nDirect Animal Source: Mammal\'s Milk\n\nIngredient Name: Whey\nAlso Known As (AKA): Whey Powder, Whey Protein\nDirect Animal Source: Mammal\'s Milk\n\nIngredient Name: Lactose\nAlso Known As (AKA): Milk Sugar\nDirect Animal Source: Mammal\'s Milk\n\nBee Product\n\nIngredient Name: Honey\nDirect Animal Source: Honey Bees\n\nIngredient Name: Beeswax\nE-Number: E901\nDirect Animal Source: Honey Bees\n\nIngredient Name: Propolis\nDirect Animal Source: Honey Bees\n\nIngredient Name: Royal Jelly\nDirect Animal Source: Honey Bees\n\nSlaughter By-product\n\nIngredient Name: Gelatin\nAlso Known As (AKA): Gelatine\nE-Number: E441\nDirect Animal Source: Animal bones, skin, connective tissues\n\nIngredient Name: Lard / Tallow\nAlso Known As (AKA): Dripping\nDirect Animal Source: Rendered animal fat (pig, cow, etc.)\n\nIngredient Name: Suet\nDirect Animal Source: Fat from around the kidneys of cows/sheep\n\nIngredient Name: Isinglass\nDirect Animal Source: Fish swim bladders\n\nIngredient Name: Rennet\nAlso Known As (AKA): Animal Rennet\nDirect Animal Source: Stomachs of young mammals\n\nIngredient Name: Pepsin\nDirect Animal Source: Pig stomachs\n\nIngredient Name: Aspic\nDirect Animal Source: Meat or fish stock\n\nInsect Product\n\nIngredient Name: Carmine\nAlso Known As (AKA): Cochineal, Carminic Acid\nE-Number: E120\nDirect Animal Source: Cochineal insects\n\nIngredient Name: Shellac\nAlso Known As (AKA): Confectioner\'s Glaze\nE-Number: E904\nDirect Animal Source: Lac insects\n\nProcessing Aid\n\nIngredient Name: Bone Char\nAlso Known As (AKA): Natural Carbon\nDirect Animal Source: Animal bones\nAmbiguous (Animal or Plant)\n\nIngredient Name: Vitamin D3\nAlso Known As (AKA): Cholecalciferol\nDirect Animal Source: Sheep\'s wool (lanolin) or lichen\n\nIngredient Name: L-cysteine\nE-Number: E920\nDirect Animal Source: Poultry feathers, human hair, or microbial fermentation\n\nIngredient Name: Glycerin / Glycerol\nE-Number: E422\nDirect Animal Source: Animal fats or vegetable oils\n\nIngredient Name: Mono- and Diglycerides\nE-Number: E471\nDirect Animal Source: Animal fats or vegetable oils\n\nIngredient Name: Stearic Acid\nE-Number: E570\nDirect Animal Source: Animal fats or vegetable fats\n\nIngredient Name: Lecithin\nE-Number: E322\nDirect Animal Source: Egg yolks or soy beans\n\nNatural Flavouring\n\nIngredient Name: Squalene / Squalane\nDirect Animal Source: Shark liver oil or plants (olives, sugarcane)\n\nIngredient Name: Castoreum\nDirect Animal Source: Beaver scent glands',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMediumFamily,
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts:
+                                              !FlutterFlowTheme.of(context)
+                                                  .bodyMediumIsCustom,
+                                        ),
+                                  )
+                                ],
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily,
+                                      letterSpacing: 0.0,
+                                      useGoogleFonts:
+                                          !FlutterFlowTheme.of(context)
+                                              .bodyMediumIsCustom,
+                                    ),
+                              ),
                             ),
                           ),
                         ],

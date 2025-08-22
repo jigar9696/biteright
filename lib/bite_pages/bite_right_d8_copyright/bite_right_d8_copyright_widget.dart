@@ -153,7 +153,7 @@ class _BiteRightD8CopyrightWidgetState
                     ),
                     Container(
                       width: double.infinity,
-                      height: 1800.0,
+                      height: 1900.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         borderRadius: BorderRadius.only(
