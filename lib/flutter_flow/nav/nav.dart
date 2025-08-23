@@ -204,6 +204,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: BiteRightD4aKosherWidget.routeName,
           path: BiteRightD4aKosherWidget.routePath,
           builder: (context, params) => BiteRightD4aKosherWidget(),
+        ),
+        FFRoute(
+          name: BiteRightD4aAlcoholWidget.routeName,
+          path: BiteRightD4aAlcoholWidget.routePath,
+          builder: (context, params) => BiteRightD4aAlcoholWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

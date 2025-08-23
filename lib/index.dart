@@ -41,3 +41,5 @@ export '/bite_pages/bite_right_d4a_f_o_d_m_a_p/bite_right_d4a_f_o_d_m_a_p_widget
     show BiteRightD4aFODMAPWidget;
 export '/bite_pages/bite_right_d4a_kosher/bite_right_d4a_kosher_widget.dart'
     show BiteRightD4aKosherWidget;
+export '/bite_pages/bite_right_d4a_alcohol/bite_right_d4a_alcohol_widget.dart'
+    show BiteRightD4aAlcoholWidget;
