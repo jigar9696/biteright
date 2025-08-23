@@ -1,16 +1,10 @@
-import '/auth/firebase_auth/auth_util.dart';
-import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/custom_code/actions/index.dart' as actions;
-import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 import 'bite_right_c2_result_model.dart';
 export 'bite_right_c2_result_model.dart';
 
@@ -143,7 +137,7 @@ class _BiteRightC2ResultWidgetState extends State<BiteRightC2ResultWidget>
                     ),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 50.0),
                       child: Stack(
                         children: [
                           if (widget.isSafe == true)
@@ -322,179 +316,6 @@ class _BiteRightC2ResultWidgetState extends State<BiteRightC2ResultWidget>
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceAround,
                                 children: [
-                                  Align(
-                                    alignment: AlignmentDirectional(0.0, 1.0),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          25.0, 10.0, 25.0, 10.0),
-                                      child: FFButtonWidget(
-                                        onPressed: () async {
-                                          logFirebaseEvent(
-                                              'BITE_RIGHT_C2_RESULT_BarCode_Button_ON_T');
-                                          logFirebaseEvent(
-                                              'BarCode_Button_scan_barcode_q_r_code');
-                                          _model.barcodeValue =
-                                              await FlutterBarcodeScanner
-                                                  .scanBarcode(
-                                            '#C62828', // scanning line color
-                                            'Cancel', // cancel button text
-                                            true, // whether to show the flash icon
-                                            ScanMode.QR,
-                                          );
-
-                                          logFirebaseEvent(
-                                              'BarCode_Button_firestore_query');
-                                          _model.scannedProductDoc =
-                                              await queryProductsRecordOnce(
-                                            queryBuilder: (productsRecord) =>
-                                                productsRecord.where(
-                                              'barcode_number',
-                                              isEqualTo: _model.barcodeValue,
-                                            ),
-                                            singleRecord: true,
-                                          ).then((s) => s.firstOrNull);
-                                          if (_model.scannedProductDoc !=
-                                              null) {
-                                            logFirebaseEvent(
-                                                'BarCode_Button_firestore_query');
-                                            _model.currentUserDoc =
-                                                await queryUsersRecordOnce(
-                                              queryBuilder: (usersRecord) =>
-                                                  usersRecord.where(
-                                                'uid',
-                                                isEqualTo: currentUserUid,
-                                              ),
-                                              singleRecord: true,
-                                            ).then((s) => s.firstOrNull);
-                                            logFirebaseEvent(
-                                                'BarCode_Button_firestore_query');
-                                            _model.userDietaryGroupDocs =
-                                                await queryDietaryGroupsRecordOnce(
-                                              queryBuilder: (dietaryGroupsRecord) =>
-                                                  dietaryGroupsRecord
-                                                      .whereArrayContainsAny(
-                                                          'avoid_ingredients',
-                                                          _model.currentUserDoc
-                                                              ?.selectedGroups),
-                                            );
-                                            logFirebaseEvent(
-                                                'BarCode_Button_custom_action');
-                                            _model.masterAvoidList =
-                                                await actions
-                                                    .createMasterAvoidList(
-                                              _model.currentUserDoc!
-                                                  .customIngredients
-                                                  .toList(),
-                                              _model.userDietaryGroupDocs!
-                                                  .toList(),
-                                            );
-                                            if (functions.findConflictingIngredient(
-                                                        _model
-                                                            .scannedProductDoc!
-                                                            .ingredients
-                                                            .toList(),
-                                                        _model.masterAvoidList!
-                                                            .toList()) !=
-                                                    '') {
-                                              logFirebaseEvent(
-                                                  'BarCode_Button_navigate_to');
-
-                                              context.pushNamed(
-                                                BiteRightC2ResultWidget
-                                                    .routeName,
-                                                queryParameters: {
-                                                  'isSafe': serializeParam(
-                                                    false,
-                                                    ParamType.bool,
-                                                  ),
-                                                  'conflictingIngredient':
-                                                      serializeParam(
-                                                    '',
-                                                    ParamType.String,
-                                                  ),
-                                                }.withoutNulls,
-                                              );
-                                            } else {
-                                              logFirebaseEvent(
-                                                  'BarCode_Button_navigate_to');
-
-                                              context.pushNamed(
-                                                BiteRightC2ResultWidget
-                                                    .routeName,
-                                                queryParameters: {
-                                                  'isSafe': serializeParam(
-                                                    false,
-                                                    ParamType.bool,
-                                                  ),
-                                                  'conflictingIngredient':
-                                                      serializeParam(
-                                                    '',
-                                                    ParamType.String,
-                                                  ),
-                                                }.withoutNulls,
-                                              );
-                                            }
-                                          } else {
-                                            logFirebaseEvent(
-                                                'BarCode_Button_show_snack_bar');
-                                            ScaffoldMessenger.of(context)
-                                                .showSnackBar(
-                                              SnackBar(
-                                                content: Text(
-                                                  '',
-                                                  style: TextStyle(
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .primaryText,
-                                                    fontWeight: FontWeight.w600,
-                                                  ),
-                                                  textAlign: TextAlign.center,
-                                                ),
-                                                duration: Duration(
-                                                    milliseconds: 10000),
-                                                backgroundColor:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondary,
-                                              ),
-                                            );
-                                          }
-
-                                          safeSetState(() {});
-                                        },
-                                        text: 'Scan Product Barcode',
-                                        options: FFButtonOptions(
-                                          width: 262.0,
-                                          height: 50.0,
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  16.0, 0.0, 16.0, 0.0),
-                                          iconPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 0.0, 0.0),
-                                          color: FlutterFlowTheme.of(context)
-                                              .primary,
-                                          textStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .titleSmall
-                                              .override(
-                                                fontFamily:
-                                                    FlutterFlowTheme.of(context)
-                                                        .titleSmallFamily,
-                                                color: Colors.white,
-                                                fontSize: 16.0,
-                                                letterSpacing: 0.0,
-                                                useGoogleFonts:
-                                                    !FlutterFlowTheme.of(
-                                                            context)
-                                                        .titleSmallIsCustom,
-                                              ),
-                                          elevation: 0.0,
-                                          borderRadius:
-                                              BorderRadius.circular(24.0),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
                                   Align(
                                     alignment: AlignmentDirectional(0.0, -1.0),
                                     child: Padding(

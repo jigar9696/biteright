@@ -240,7 +240,7 @@ class _BiteRightC1HomePageWidgetState extends State<BiteRightC1HomePageWidget> {
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              duration: Duration(milliseconds: 8000),
+                              duration: Duration(milliseconds: 5000),
                               backgroundColor:
                                   FlutterFlowTheme.of(context).secondary,
                             ),
