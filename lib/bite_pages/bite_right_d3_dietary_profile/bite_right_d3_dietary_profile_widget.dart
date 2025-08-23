@@ -191,7 +191,7 @@ class _BiteRightD3DietaryProfileWidgetState
                           alignment: AlignmentDirectional(0.0, -1.0),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 10.0),
+                                0.0, 0.0, 0.0, 5.0),
                             child: FlutterFlowChoiceChips(
                               options: [
                                 ChipData('Vegan'),
@@ -200,7 +200,8 @@ class _BiteRightD3DietaryProfileWidgetState
                                 ChipData('Halal '),
                                 ChipData('Vegetarian'),
                                 ChipData('FODMAP'),
-                                ChipData('Kosher')
+                                ChipData('Kosher'),
+                                ChipData('Alcohol')
                               ],
                               onChanged: (val) => safeSetState(
                                   () => _model.choiceChipsValues = val),
@@ -220,7 +221,7 @@ class _BiteRightD3DietaryProfileWidgetState
                                     ),
                                 iconColor:
                                     FlutterFlowTheme.of(context).tertiary,
-                                iconSize: 16.0,
+                                iconSize: 18.0,
                                 elevation: 0.0,
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
@@ -261,7 +262,7 @@ class _BiteRightD3DietaryProfileWidgetState
                         ),
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 15.0, 0.0, 10.0),
+                              0.0, 5.0, 0.0, 5.0),
                           child: Text(
                             'Custom Restrictions',
                             textAlign: TextAlign.start,
@@ -399,7 +400,7 @@ class _BiteRightD3DietaryProfileWidgetState
                         ),
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 10.0, 0.0, 10.0),
+                              0.0, 5.0, 0.0, 10.0),
                           child: Builder(
                             builder: (context) {
                               final ingredientItem =
